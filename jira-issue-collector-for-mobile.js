@@ -20,8 +20,13 @@ function openCollector(collectorUrl) {
 }
 
 function closeCollector() {
-  var collector = document.getElementById('collector-background');
-  collector.parentElement.removeChild(collector);
+  removeElement('collector-background');
+  removeElement('collector-container');
+}
+
+function removeElement(elementId) {
+  var element = document.getElementById(elementId);
+  element.parentElement.removeChild(element);
 }
 
 window.onload = function() {
